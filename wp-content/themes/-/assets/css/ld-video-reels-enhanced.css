@@ -1,0 +1,265 @@
+.lqd-video-reels-container .flickity-viewport {
+    height: auto !important;
+    transition: none !important; /* Remove any interfering transitions */
+}
+.lqd-video-reels-container .carousel-items {
+    width: 100%;
+    min-height: 150px; /* Adjust as needed */
+}
+.lqd-video-reels-container .flickity-slider {
+    display: flex;
+    align-items: center;
+}
+.lqd-video-reel-item {
+    visibility: visible !important;
+    display: block !important;
+}
+/* Main Container */
+.lqd-video-reels-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+/* Nuclear option - add this to your theme's CSS */
+.lqd-video-reels-container,
+.lqd-video-reels-container * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    width: auto !important;
+    transform: none !important;
+}
+
+.lqd-video-reel-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+/* Reel Items */
+.lqd-video-reel-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important; /* Override any absolute positioning */
+}
+
+.lqd-video-reel-item.is-selected {
+    transform: scale(1.05);
+}
+.lqd-video-reel-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1 !important;
+}
+
+.flickity-slider {
+    display: flex;
+    align-items: center;
+}
+
+.lqd-video-reels-container {
+    overflow: visible;
+}
+.lqd-video-reel-content {
+    position: relative;
+}
+
+.lqd-video-reel-thumbnail img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.lqd-video-reel-item:hover .lqd-video-reel-thumbnail img {
+    transform: scale(1.05);
+}
+
+.lqd-video-reel-name {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Modal Styles */
+.lqd-video-reels-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.lqd-video-reels-modal.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lqd-video-reels-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.lqd-video-reels-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.lqd-video-reels-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 80%;
+    margin: 0 auto;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.lqd-video-reels-modal-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.lqd-video-reels-modal-video iframe,
+.lqd-video-reels-modal-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Progress Bar */
+.lqd-video-reels-progress-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    gap: 5px;
+    z-index: 3;
+}
+
+.lqd-video-reel-progress {
+    flex: 1;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.lqd-video-reel-progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+}
+
+.lqd-video-reel-progress-bar.is-active {
+    transform: translateX(0);
+}
+
+.lqd-video-reel-progress-bar.is-animating {
+    transform: translateX(0);
+    transition: transform linear;
+}
+
+.lqd-video-reel-progress-bar.is-complete {
+    transform: translateX(0);
+}
+
+/* Navigation */
+.lqd-video-reels-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.lqd-video-reels-modal-content:hover .lqd-video-reels-nav {
+    opacity: 1;
+}
+
+.lqd-video-reels-prev {
+    left: 15px;
+}
+
+.lqd-video-reels-next {
+    right: 15px;
+}
+
+.lqd-video-reels-nav svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Close Button */
+.lqd-video-reels-modal-close {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.lqd-video-reels-modal-close svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Body class when modal is open */
+body.lqd-video-reels-modal-open {
+    overflow: hidden;
+}
+
+/* Vertical Layout */
+.lqd-video-reels-vertical .flickity-slider {
+    flex-direction: column;
+}
+
+.lqd-video-reels-vertical .lqd-video-reel-item {
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .lqd-video-reels-modal-content {
+        height: 60%;
+    }
+    
+    .lqd-video-reels-nav {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .lqd-video-reels-nav svg {
+        width: 18px;
+        height: 18px;
+    }
+}
