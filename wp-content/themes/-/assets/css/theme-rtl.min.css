@@ -1,3 +1,24 @@
+/* Import Arabic & English fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+/* Default English font */
+/* Arabic font when lang="ar" */
+/* Arabic */
+/* Arabic */
+body[dir=rtl] span,
+body[dir=rtl] p,
+body[dir=rtl] body,
+body[dir=rtl] a,
+body[dir=rtl] h1,
+body[dir=rtl] h2,
+body[dir=rtl] h3,
+body[dir=rtl] h4,
+body[dir=rtl] h5,
+body[dir=rtl] h6 {
+    font-family: 'Cairo', sans-serif !important;
+    direction: rtl;
+    text-align: right;
+}
 body[dir=rtl] .vc_col-xs-1, body[dir=rtl] .vc_col-xs-10, body[dir=rtl] .vc_col-xs-11, body[dir=rtl] .vc_col-xs-12, body[dir=rtl] .vc_col-xs-2, body[dir=rtl] .vc_col-xs-3, body[dir=rtl] .vc_col-xs-4, body[dir=rtl] .vc_col-xs-5, body[dir=rtl] .vc_col-xs-6, body[dir=rtl] .vc_col-xs-7, body[dir=rtl] .vc_col-xs-8, body[dir=rtl] .vc_col-xs-9 {
   float: right; }
 
