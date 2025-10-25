@@ -10,7 +10,28 @@ License URI: license.txt
 Text Domain: archub
 Tags: responsive, retina, rtl-language-support, blog, portfolio, custom-colors, live-editor
 */
+/* Import Arabic & English fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
+/* Default English font */
+/* Arabic font when lang="ar" */
+/* Arabic */
+/* Arabic */
+body[dir=rtl] span,
+body[dir=rtl] p,
+body[dir=rtl] body,
+body[dir=rtl] a,
+body[dir=rtl] h1,
+body[dir=rtl] h2,
+body[dir=rtl] h3,
+body[dir=rtl] h4,
+body[dir=rtl] h5,
+body[dir=rtl] h6 {
+    font-family: 'Cairo', sans-serif !important;
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: plaintext;
+}
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
