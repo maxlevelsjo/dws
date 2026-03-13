@@ -26,6 +26,9 @@ body[dir=rtl] h2,
 body[dir=rtl] h3,
 body[dir=rtl] h4,
 body[dir=rtl] h5,
+body[dir=rtl] li,
+body[dir=rtl] tr,
+body[dir=rtl] td,
 body[dir=rtl] h6 {
     font-family: 'Cairo', sans-serif !important;
     direction: rtl;
